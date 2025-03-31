@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR Didier</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body    {
+            border: 10px solid blue;
+            min-height: 100vh;
+            background: black;
+            color: white;
+            display: grid;
+            place-items: center;
+        }     
+        section {
+            background: rgba(255, 255, 255, 0.4);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        p   {
+            font-size: 100px;
+        }
+        button{
+            font-size:130%
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>CONTADOR de cliques <a href="https://www.eliti.com.br/" target="_blank">ELITI</a></h1>
+        <p id="numero_contador">0</p>
+        <button onclick="diminuir()">menos</button>
+        <button onclick="aumentar()">mais</button>
+    </section>
+    <script>
+        let numero = 0
+        function updatedisplay()    {
+            document.getElementById("numero_contador").textContent = numero
+        }
+        function aumentar()   {
+            ++numero;
+            updatedisplay();
+        }
+        function diminuir()   {
+            --numero;
+            updatedisplay();
+        }
+        
+
+    </script>
+    
+</body>
+</html>
+
+
+<!-- para comentar linhas em HTML:  <script>let contador = 0</script>-->
