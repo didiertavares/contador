@@ -1,1 +1,35 @@
 <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p></p>
+    <button onclick="sub()">menos</button>
+    <button onclick="add()">mais</button>
+    <script>
+
+        let numero = 0
+        
+        function add() {
+            numero++
+            render()
+        }
+
+        function sub() {
+            numero--
+            render()
+        }
+
+        function render() {
+            document.querySelector("p").innerText = numero
+        }
+
+        render()
+
+    </script>
+</body>
+</html>
