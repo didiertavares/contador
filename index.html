@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MEU CONTADOR</title>
-        <style>
-            *{margin: 0;
-            box-sizing: border-box;}
-            body {
-                border: 1px solid red;
-                min-width: 100vh;
-            }
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p></p>
+    <button onclick="sub()">menos</button>
+    <button onclick="add()">mais</button>
+    <script>
 
-        </style>
-    </head>
-    <body>
-        <section>
-            <h1>contador</h1>
-            <p>0</p>
-            <button>menos</button>
-            <button>mais</button>
-        </section>
-    </body>
+        let numero = 0
+        
+        function add() {
+            numero++
+            render()
+        }
 
+        function sub() {
+            numero--
+            render()
+        }
+
+        function render() {
+            document.querySelector("p").innerText = numero
+        }
+
+        render()
+
+    </script>
+</body>
 </html>
